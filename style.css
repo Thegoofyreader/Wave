@@ -1,0 +1,289 @@
+
+body {
+  margin: 0px;
+  font-family: Arial, serif;
+  background: #121212;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+/* Header + navbar */
+
+header {
+  padding: 10px 40px;
+  background: #1f1f1f;  
+  align-items: center;
+}
+
+header h1 {
+  grid-column: span 6;
+  color: #e6e5e6;
+}
+
+header nav {
+  grid-column: 7 / span 6;
+  justify-self: end;
+}
+
+header nav a {
+  color: #e6e5e6;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: #f5670c;
+  text-decoration-thickness: 3px;
+}
+
+/* Main */
+
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  color: #e6e5e6;
+}
+
+main.grid {
+  min-height: calc(100vh - 350px);
+}
+
+main img {
+  grid-column: span 6;
+  width: 100%;
+  border-radius: 6px;
+}
+
+main .welcome {
+  grid-column: 8 / span 5;
+}
+
+main > h2 {
+  grid-column: span 12;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 20px;
+}
+
+main .card {
+  grid-column: span 4;
+  background: #1d1d1d;
+  padding: 10px 20px;
+  border-radius: 6px;
+  height: 400px;
+}
+
+main .topp-tekst {
+  grid-column: span 12;
+  justify-self: center;
+  align-self: flex-start;
+  font-size: 2.5em;
+  margin-top: -60px;
+  text-decoration: underline;
+}
+
+main .img-events {
+  height: 340px;
+}
+
+h3.tekstfront {
+  text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+  background: #1f1f1f;
+  color: #e6e5e6;
+  padding: 1rem;
+}
+
+footer .left {
+  grid-column: 1 / span 4;
+  justify-self: start;
+  align-self: flex-end;
+}
+
+footer .center {
+  grid-column: 5 / span 4;
+  justify-self: center;
+  align-self: flex-end;
+  opacity: .4;
+}
+
+footer .right {
+  grid-column: 9 / span 4;
+  justify-self:flex-end;
+  align-self: flex-end;
+}
+
+.icon-style {
+  height: 30px;
+  margin-left: 15px;
+}
+
+
+
+/* Meny specific */
+
+
+main .frokost-tekst {
+  grid-column: span 12;
+  justify-self: center;
+  align-self: flex-start;
+  font-size: 1.4em;
+}
+
+main .img-events-menu {
+  height: 330px;
+}
+
+main .foodcard {
+  grid-column: span 4;
+  background: #1d1d1d;
+  padding: 10px 20px;
+  border-radius: 6px;
+  height: 450px;
+}
+
+main .drinkcard {
+  grid-column: span 3;
+  background: #1d1d1d;
+  padding: 0px 20px;
+  border-radius: 6px;
+  height: 305px;
+  width: 200px;
+}
+
+main .img-events-drink {
+  height: 200px;
+}
+
+.meny-allergener {
+  text-align: center;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+h3.cardtekst {
+  font-size: 1em;
+  text-align: center;
+}
+
+.pris {
+  font-size: 1.55em;
+  text-align: center;
+  text-decoration: solid;
+  margin-top: 15px;
+}
+
+.icon-allergen {
+  height: 20px;
+  width: 20px;
+}
+
+
+/* Booking specific */
+
+main .bookingcardinfo {
+  grid-column: 3 / span 4;
+  background: #1d1d1d;
+  padding: 0px 20px;
+  border-radius: 6px;
+  height: 450px;
+  outline: 3px dashed #ff822d;
+  outline-offset: -8px;
+  text-align: center;
+}
+
+main .bookingcardform {
+  grid-column: 7 / span 5;
+  background: #1d1d1d;
+  padding: 0px 20px;
+  border-radius: 6px;
+  height: 450px;
+  font-weight: 600;
+}
+
+
+.heading {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.heading-dager {
+  color: #ff822d;
+  font-size: 22px;
+}
+
+.heading-tlf {
+  font-size: 21px;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #080808;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 19px;
+  margin: 50px 5px 5px 0;
+  border-radius: 32px;
+  box-sizing: border-box;
+  width: 100%;
+  text-decoration: none;
+  font-size: 19px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #ff822d;
+}
+
+/* responsive */
+
+@media screen and (max-width: 960px) {
+  main img {
+    grid-column: 2 / span 10;
+  }
+
+  main .welcome {
+    grid-column: 3 / span 8;
+    text-align: center;
+  }
+
+  main .card {
+    grid-column: 3 / span 8;
+  }
+
+  main .foodcard {
+    grid-column: 3 / span 8;
+  }
+
+  main .drinkcard {
+    grid-column: 5 / span 8;
+  }
+
+  main .bookingcardinfo {
+    grid-column: 3 / span 8;
+  }
+
+  main .bookingcardform {
+    grid-column: 3 / span 8;
+  }
+
+
+}
